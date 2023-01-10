@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 3px solid red;
+}
+
+.nav-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-logo-img{
+    width: 80%;
+}
+/* Here must be an animation */
+.nav-list{
+    align-items: center;
+    list-style: none;
+    display: none;
+    transition: all .3s ease-in-out;
+}
+
+.nav-list.show{
+    flex-direction: column;
+    display: block;
+}
+/* Animation up  */
+.nav-list-element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-list-element-link{
+    display: inline-block;
+    color: #1D3B72;
+    margin: .5rem 0;
+    text-decoration: none;
+    text-align: left;
+}
+
+@media only screen and (min-width: 900px) {
+    .nav{
+        flex-direction: row;
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+    }
+    .nav-list.show{
+        display: flex;
+        flex-direction: row;
+    }
+  }
+
+  @media only screen and (max-width: 899px) {
+    .nav-list.show{
+        display: flex;
+        flex-direction: column;
+    }
+  }
